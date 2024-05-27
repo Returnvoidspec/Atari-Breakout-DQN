@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "breakout-rl-dqn"
+version = "0.1.0"
+description = ""
+authors = ["Martin <martin.jarnier@epita.fr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+pygame = {version = "^2.5.2", allow-prereleases = true}
+jupyterlab = {version = "^4.1.0a2", allow-prereleases = true}
+numpy = {version = "^1.26.1", allow-prereleases = true}
+matplotlib = {version = "^3.8.0", allow-prereleases = true}
+gymnasium = {extras = ["classic-control", "toy-text"], version = "^0.29.1", allow-prereleases = true}
+imageio = {extras = ["ffmpeg"], version = "^2.31.6"}
+torch = "^2.1.0"
+opencv-python = "^4.8.1.78"
+
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.3"
+requests-mock = "^1.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
